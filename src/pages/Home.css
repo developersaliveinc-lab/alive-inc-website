@@ -1,0 +1,156 @@
+.hero-section {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+.main-title {
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(120deg, #00ffff, #00ff88, #ff00ff, #00ffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 300%;
+  animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  margin: 30px 0 50px;
+  color: #e0e0e0;
+}
+
+.typed-text {
+  color: #00ffff;
+  font-weight: bold;
+  text-shadow: 0 0 20px #00ffff;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 20px 60px;
+  background: linear-gradient(45deg, #00ffff, #00ff88);
+  color: black;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.7);
+  transition: all 0.4s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 80px rgba(0, 255, 255, 0.9);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  color: #00ffff;
+}
+
+.arrow {
+  width: 60px;
+  height: 60px;
+}
+
+.services-section, .why-section {
+  padding: 140px 20px;
+  background: #000;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 100px;
+  color: #00ffff;
+  text-shadow: 0 0 30px #00ffff;
+}
+
+.white { color: white; }
+
+.services-grid, .why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.service-card, .why-card {
+  background: rgba(0, 255, 255, 0.08);
+  padding: 40px 25px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  transition: all 0.5s ease;
+  backdrop-filter: blur(10px);
+}
+
+.service-card:hover, .why-card:hover {
+  background: rgba(0, 255, 255, 0.2);
+  border-color: #00ffff;
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.5);
+  transform: translateY(-10px);
+}
+
+.service-icon {
+  font-size: 4rem;
+  color: #00ffff;
+  margin-bottom: 20px;
+}
+
+.service-card h3, .why-card {
+  font-size: 1.6rem;
+  margin: 20px 0;
+  color: #00ffff;
+}
+
+.why-card {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  padding: 60px 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-title { font-size: 3.5rem; letter-spacing: 4px; }
+  .subtitle { font-size: 1.6rem; }
+  .section-title { font-size: 2.8rem; }
+  .cta-btn { padding: 16px 40px; font-size: 1.2rem; }
+}

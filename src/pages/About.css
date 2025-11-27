@@ -1,0 +1,310 @@
+/* ===== MASTER ===== */
+.about-master {
+  background: #000;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ===== HERO SLIDER ===== */
+.slider-section {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #00ffff, #ff00ff, #00ff88, #ffff00, #00ffff);
+  opacity: 0.6;
+  filter: blur(6px);
+  z-index: 1;
+  animation: bgFlow 15s ease infinite;
+}
+
+@keyframes bgFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.slide-content {
+  text-align: center;
+  z-index: 10;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+.slide-title {
+  font-size: 6rem;
+  font-weight: 900;
+  background: linear-gradient(120deg, #00ffff, #ff00ff, #00ff88, #ffff00, #00ffff);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 400%;
+  animation: gradientFlow 10s ease infinite;
+  letter-spacing: 12px;
+  text-shadow: 0 0 80px rgba(0,255,255,0.8);
+  margin-bottom: 20px;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.slide-subtitle {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: #00ffff;
+  text-shadow: 0 0 40px #00ffff;
+  font-weight: bold;
+}
+
+.slide-desc {
+  font-size: 1.8rem;
+  color: #e0e0e0;
+  font-style: italic;
+  text-shadow: 0 0 20px rgba(0,255,255,0.4);
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 20;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.dot.active {
+  background: #00ffff;
+  box-shadow: 0 0 30px #00ffff;
+  transform: scale(1.5);
+}
+
+/* ===== CONTAINER & SECTION TITLES ===== */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 80px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 50px rgba(0,255,255,0.6);
+}
+
+/* ===== FOUNDER SECTION ===== */
+.founder-section {
+  padding: 150px 0;
+  background: linear-gradient(to bottom, #000428, #004e92);
+}
+
+.founder-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 80px;
+  background: rgba(0,255,255,0.08);
+  padding: 60px;
+  border-radius: 30px;
+  border: 2px solid rgba(0,255,255,0.3);
+  box-shadow: 0 0 80px rgba(0,255,255,0.3);
+  backdrop-filter: blur(20px);
+}
+
+.founder-photo {
+  position: relative;
+  width: 400px;
+  height: 520px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 0 80px rgba(0,255,255,0.7);
+}
+
+.founder-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.founder-photo:hover img {
+  transform: scale(1.15);
+}
+
+.photo-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(0,255,255,0.5) 50%, transparent 70%);
+  animation: shine 8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) translateY(-100%); }
+  100% { transform: translateX(100%) translateY(100%); }
+}
+
+.founder-info h3 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.role {
+  font-size: 1.6rem;
+  color: #00ffff;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.bio {
+  font-size: 1.2rem;
+  color: #ddd;
+  line-height: 1.8;
+}
+
+/* ===== TEAM SECTION ===== */
+.team-section {
+  padding: 150px 0;
+  background: linear-gradient(to top, #000, #001122);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.team-card {
+  background: rgba(0,255,255,0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0,255,255,0.3);
+  transition: all 0.5s ease;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.member-photo {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.2);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent 40%);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.team-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay p {
+  color: #00ffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 15px #000;
+}
+
+.team-card h3 {
+  text-align: center;
+  margin: 15px 0 10px;
+  font-size: 1.5rem;
+  color: #00ffff;
+}
+
+/* ===== PARTNERS SECTION ===== */
+.partners-section {
+  padding: 120px 0;
+  background: #000;
+}
+
+.partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.partner-logo {
+  height: 80px;
+  filter: grayscale(80%) brightness(0.7);
+  transition: all 0.5s ease;
+  opacity: 0.8;
+}
+
+.partner-logo:hover {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+  transform: scale(1.3) translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,255,255,0.3);
+}
+
+.partner-logo img {
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .founder-card { flex-direction: column; text-align: center; gap: 40px; }
+  .founder-photo { width: 320px; height: 420px; }
+}
+
+@media (max-width: 768px) {
+  .slide-title { font-size: 3rem; letter-spacing: 5px; }
+  .slide-subtitle { font-size: 1.6rem; }
+  .slide-desc { font-size: 1.2rem; }
+  .team-grid { grid-template-columns: 1fr; gap: 25px; }
+  .section-title { font-size: 2.5rem; }
+}

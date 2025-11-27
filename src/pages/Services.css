@@ -1,0 +1,160 @@
+.services-monster {
+  background: #000;
+  color: white;
+  overflow: hidden;
+}
+
+.slider-monster {
+  height: 100vh;
+  position: relative;
+}
+
+.slide-monster {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #00ffff, #ff00ff, #00ff88);
+  opacity: 0.3;
+  filter: blur(10px);
+}
+
+.content-monster {
+  text-align: center;
+  z-index: 10;
+  padding: 0 20px;
+}
+
+.mega-title {
+  font-size: 10rem;
+  font-weight: 900;
+  letter-spacing: 15px;
+  background: linear-gradient(120deg, #00ffff, #ff00ff, #00ff88, #ffff00, #00ffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 400%;
+  animation: gradientShift 12s ease infinite;
+  text-shadow: 0 0 100px rgba(0,255,255,0.9);
+  line-height: 1;
+}
+
+.mega-subtitle {
+  font-size: 3.5rem;
+  margin: 40px 0;
+  color: #00ffff;
+  text-shadow: 0 0 60px #00ffff;
+  font-weight: bold;
+}
+
+.mega-desc {
+  font-size: 3rem;
+  font-style: italic;
+  color: #e0e0e0;
+  text-shadow: 0 0 40px rgba(0,255,255,0.6);
+}
+
+.dots-monster {
+  position: absolute;
+  bottom: 80px;
+  display: flex;
+  gap: 25px;
+}
+
+.dot-big {
+  width: 20px;
+  height: 20px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+.dot-big.active {
+  background: #00ffff;
+  box-shadow: 0 0 50px #00ffff;
+  transform: scale(2);
+}
+
+/* ALL SERVICES BELOW */
+.all-services {
+  padding: 200px 20px;
+  background: linear-gradient(to bottom, #000, #000428);
+}
+
+.all-services-title {
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 150px;
+  color: #00ffff;
+  text-shadow: 0 0 60px #00ffff;
+}
+
+.services-grid-big {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 60px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.service-mega-card {
+  background: rgba(0,255,255,0.08);
+  padding: 70px 40px;
+  border-radius: 30px;
+  text-align: center;
+  border: 2px solid rgba(0,255,255,0.4);
+  backdrop-filter: blur(15px);
+  transition: all 0.8s ease;
+  box-shadow: 0 0 40px rgba(0,255,255,0.3);
+}
+
+.service-mega-card:hover {
+  border-color: #00ffff;
+  box-shadow: 0 0 120px rgba(0,255,255,0.9);
+  background: rgba(0,255,255,0.2);
+}
+
+.mega-icon {
+  font-size: 6rem;
+  color: #00ffff;
+  margin-bottom: 30px;
+  text-shadow: 0 0 40px #00ffff;
+}
+
+.service-mega-card h3 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: #00ffff;
+}
+
+.tech, .desc {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .mega-title { font-size: 6rem; letter-spacing: 8px; }
+  .mega-subtitle { font-size: 2.2rem; }
+  .mega-desc { font-size: 2rem; }
+  .all-services-title { font-size: 3.5rem; }
+}
+
+@media (max-width: 768px) {
+  .mega-title { font-size: 4rem; letter-spacing: 5px; }
+  .mega-subtitle { font-size: 1.8rem; }
+  .mega-desc { font-size: 1.5rem; }
+}
