@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import "./Header.css";
-import logo from "../images/logo.png"; // ✅ Import your logo from src/images
+import logo from "../images/logo.png"; // Make sure logo exists in src/images
 
 const Header = () => {
   return (
-    <motion.header initial={{ y: -100 }} animate={{ y: 0 }} className="header">
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className="header"
+    >
       <div className="container">
         {/* Logo */}
         <div className="logo">
