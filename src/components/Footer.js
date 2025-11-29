@@ -12,10 +12,8 @@ const Footer = () => {
 
   return (
     <footer className="alive-footer">
-      
       {/* Footer Container */}
       <div className="footer-container">
-
         {/* Left Side - Quick Links */}
         <div className="footer-nav">
           <h3>Quick Links</h3>
@@ -54,7 +52,7 @@ const Footer = () => {
           <p>📞 +91 9324745058</p>
           <p>✉️ <a href="mailto:info@aliveinc.in">info@aliveinc.in</a></p>
           <p>📍 F-85, 1st Floor, Nano-Wing, Fantasia Business Park, Near Inorbit Mall, Sector-30A, Vashi, Navi-Mumbai</p>
-          
+
           {/* Social Icons */}
           <div className="footer-social">
             <a href="https://linkedin.com/in/ishaque-shaikh-2004" target="_blank" rel="noopener noreferrer">in</a>
@@ -63,7 +61,6 @@ const Footer = () => {
             <a href="https://facebook.com/ishaque.shaikh.2004" target="_blank" rel="noopener noreferrer">fb</a>
           </div>
         </div>
-
       </div>
 
       {/* Footer Logo */}
@@ -73,7 +70,7 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="footer-bottom">
-        <p>©Copyright {year} Alive Inc All Rights Reserved</p>
+        <p>© {year} Alive Inc. All Rights Reserved</p>
         <p>
           Websites: metungtech.com | slot938.com | thaicasinobin.com | jqk41.com | thaibet55.com | kuyuluk.com | soccer918.com | huc999.casino | krooree.com | slot5599.com
         </p>
