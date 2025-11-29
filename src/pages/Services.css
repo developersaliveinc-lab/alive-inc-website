@@ -1,12 +1,16 @@
+/* ===== SERVICES MASTER ===== */
 .services-monster {
-  background: #000;
-  color: white;
+  background: #000; /* black background for rest of section */
+  color: #fff;
   overflow: hidden;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* ===== HERO SLIDER ===== */
 .slider-monster {
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 .slide-monster {
@@ -20,141 +24,273 @@
 .slide-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #00ffff, #ff00ff, #00ff88);
-  opacity: 0.3;
-  filter: blur(10px);
+  background: #fff; /* WHITE SLIDER */
+  opacity: 1;
+  z-index: 1;
 }
 
 .content-monster {
   text-align: center;
   z-index: 10;
   padding: 0 20px;
+  max-width: 90%;
 }
 
 .mega-title {
-  font-size: 10rem;
+  font-size: 5rem;
   font-weight: 900;
-  letter-spacing: 15px;
-  background: linear-gradient(120deg, #00ffff, #ff00ff, #00ff88, #ffff00, #00ffff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  background-size: 400%;
-  animation: gradientShift 12s ease infinite;
-  text-shadow: 0 0 100px rgba(0,255,255,0.9);
-  line-height: 1;
+  letter-spacing: 4px;
+  color: #111; /* dark text for white slider */
+  line-height: 1.1;
 }
 
 .mega-subtitle {
-  font-size: 3.5rem;
-  margin: 40px 0;
-  color: #00ffff;
-  text-shadow: 0 0 60px #00ffff;
+  font-size: 2.4rem;
+  margin: 25px 0;
+  color: #222;
   font-weight: bold;
 }
 
 .mega-desc {
-  font-size: 3rem;
+  font-size: 2rem;
   font-style: italic;
-  color: #e0e0e0;
-  text-shadow: 0 0 40px rgba(0,255,255,0.6);
+  color: #444;
 }
 
+/* ===== DOTS ===== */
 .dots-monster {
   position: absolute;
-  bottom: 80px;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 25px;
+  gap: 15px;
+  z-index: 10;
 }
 
 .dot-big {
-  width: 20px;
-  height: 20px;
-  background: rgba(255,255,255,0.4);
+  width: 16px;
+  height: 16px;
+  background: rgba(0,0,0,0.3);
   border-radius: 50%;
   cursor: pointer;
-  transition: all 0.6s;
+  transition: all 0.3s ease;
 }
 
 .dot-big.active {
-  background: #00ffff;
-  box-shadow: 0 0 50px #00ffff;
-  transform: scale(2);
+  background: #111;
+  box-shadow: 0 0 20px #111;
+  transform: scale(1.6);
 }
 
-/* ALL SERVICES BELOW */
+/* ===== SERVICES GRID ===== */
 .all-services {
-  padding: 200px 20px;
-  background: linear-gradient(to bottom, #000, #000428);
+  padding: 150px 20px 80px;
+  background: #000;
 }
 
 .all-services-title {
   text-align: center;
-  font-size: 5rem;
-  margin-bottom: 150px;
-  color: #00ffff;
-  text-shadow: 0 0 60px #00ffff;
+  font-size: 4rem;
+  margin-bottom: 100px;
+  color: #ff0000;
 }
 
 .services-grid-big {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 60px;
-  max-width: 1600px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .service-mega-card {
-  background: rgba(0,255,255,0.08);
-  padding: 70px 40px;
-  border-radius: 30px;
+  background: #111;
+  padding: 50px 30px;
+  border-radius: 20px;
   text-align: center;
-  border: 2px solid rgba(0,255,255,0.4);
-  backdrop-filter: blur(15px);
-  transition: all 0.8s ease;
-  box-shadow: 0 0 40px rgba(0,255,255,0.3);
+  border: 2px solid #ff0000;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 15px rgba(255,0,0,0.3);
 }
 
 .service-mega-card:hover {
-  border-color: #00ffff;
-  box-shadow: 0 0 120px rgba(0,255,255,0.9);
-  background: rgba(0,255,255,0.2);
+  background: #ff0000;
+  color: #fff;
+  transform: translateY(-8px);
+  box-shadow: 0 0 40px #ff0000;
 }
 
 .mega-icon {
-  font-size: 6rem;
-  color: #00ffff;
-  margin-bottom: 30px;
-  text-shadow: 0 0 40px #00ffff;
+  font-size: 4.5rem;
+  color: #ff0000;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.service-mega-card:hover .mega-icon {
+  color: #fff;
 }
 
 .service-mega-card h3 {
-  font-size: 2.5rem;
-  margin: 20px 0;
-  color: #00ffff;
+  font-size: 2rem;
+  margin: 15px 0;
+  color: #fff;
 }
 
-.tech, .desc {
-  font-size: 1.4rem;
-  line-height: 1.8;
+.tech,
+.desc {
+  font-size: 1rem;
   color: #ccc;
 }
 
-@keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+.service-mega-card:hover .tech,
+.service-mega-card:hover .desc {
+  color: #fff;
 }
 
-/* Responsive */
+/* ===== TECHNOLOGIES SECTION ===== */
+.tech-section {
+  padding: 100px 20px;
+  background: #111;
+}
+
+.tech-title {
+  text-align: center;
+  font-size: 3rem;
+  color: #ff0000;
+  margin-bottom: 60px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tech-card {
+  background: #000;
+  padding: 20px 10px;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #ff0000;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials {
+  padding: 120px 20px;
+  background: #000;
+}
+
+.testimonials .section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 80px;
+  color: #ff0000;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: #111;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid #ff0000;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  background: #ff0000;
+  color: #fff;
+  box-shadow: 0 0 40px #ff0000;
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid #ff0000;
+}
+
+.testimonial-card .feedback {
+  font-style: italic;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.testimonial-card h4 {
+  color: #ff0000;
+  margin-bottom: 5px;
+}
+
+.testimonial-card .position {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* ===== CTA SECTION ===== */
+.cta-section {
+  padding: 80px 20px;
+  background: #111;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 3rem;
+  color: #ff0000;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 40px;
+  background: #ff0000;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #ff0000;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-  .mega-title { font-size: 6rem; letter-spacing: 8px; }
-  .mega-subtitle { font-size: 2.2rem; }
-  .mega-desc { font-size: 2rem; }
-  .all-services-title { font-size: 3.5rem; }
+  .mega-title { font-size: 4rem; letter-spacing: 4px; }
+  .mega-subtitle { font-size: 1.8rem; }
+  .mega-desc { font-size: 1.5rem; }
+  .tech-title { font-size: 2.5rem; }
 }
 
 @media (max-width: 768px) {
-  .mega-title { font-size: 4rem; letter-spacing: 5px; }
-  .mega-subtitle { font-size: 1.8rem; }
-  .mega-desc { font-size: 1.5rem; }
+  .mega-title { font-size: 3.2rem; letter-spacing: 3px; }
+  .mega-subtitle { font-size: 1.4rem; }
+  .mega-desc { font-size: 1.2rem; }
+  .tech-title { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .mega-title { font-size: 2.4rem; letter-spacing: 2px; }
+  .mega-subtitle { font-size: 1.1rem; }
+  .mega-desc { font-size: 1rem; }
+  .tech-title { font-size: 1.5rem; }
 }

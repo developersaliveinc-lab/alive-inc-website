@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ReactTyped } from "react-typed"; // ✅ Correct named import
+import { ReactTyped } from "react-typed";
 import "./About.css";
 
 // ===== FOUNDER PHOTO =====
@@ -8,10 +8,12 @@ const ishaquePhoto = "/images/ishaque.jpg";
 
 // ===== TEAM MEMBERS =====
 const teamMembers = [
-  { name: "Rahul Sharma", role: "Lead Developer", photo: "https://i.imgur.com/3m9oYvL.jpg" },
-  { name: "Priya Singh", role: "UI/UX Designer", photo: "https://i.imgur.com/2kF8jPq.jpg" },
-  { name: "Aman Verma", role: "Blockchain Expert", photo: "https://i.imgur.com/7kL9mNx.jpg" },
-  { name: "Neha Kapoor", role: "Project Manager", photo: "https://i.imgur.com/5pR3vZt.jpg" },
+  { name: "Rahul Sharma", role: "Lead Developer", photo: "https://randomuser.me/api/portraits/men/32.jpg" },
+  { name: "Priya Singh", role: "UI/UX Designer", photo: "https://randomuser.me/api/portraits/women/44.jpg" },
+  { name: "Aman Verma", role: "Blockchain Expert", photo: "https://randomuser.me/api/portraits/men/65.jpg" },
+  { name: "Neha Kapoor", role: "Project Manager", photo: "https://randomuser.me/api/portraits/women/56.jpg" },
+  { name: "Siddharth Roy", role: "AI Specialist", photo: "https://randomuser.me/api/portraits/men/77.jpg" },
+  { name: "Ananya Mehta", role: "Frontend Developer", photo: "https://randomuser.me/api/portraits/women/33.jpg" },
 ];
 
 // ===== PARTNERS =====
@@ -130,33 +132,48 @@ const About = () => {
         </div>
       </section>
 
-      {/* ===== FOUNDER ===== */}
-      <section className="founder-section">
-        <div className="container">
-          <motion.h2 className="section-title" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>The Man Behind ALIVE INC</motion.h2>
-          <div className="founder-card">
-            <div className="founder-photo">
-              <img src={ishaquePhoto} alt="Ishaque Khan" />
-              <div className="photo-glow"></div>
-            </div>
-            <div className="founder-info">
-              <h3>Ishaque Khan</h3>
-              <p className="role">Founder & CEO</p>
-              <p className="bio">
-                Started from a small room in Vashi with just a laptop and unbreakable willpower. 
-                Today leading a team of 50+ warriors serving clients in 15+ countries.
-                <br /><br />
-                <strong>"I don't sell websites. I build digital empires."</strong>
-              </p>
-              <div className="founder-social">
-                <a href="https://instagram.com/ishaque.2004" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
-                <a href="https://linkedin.com/in/ishaque-shaikh-2004" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
-                <a href="https://wa.me/919324745058" target="_blank" rel="noreferrer"><i className="fab fa-whatsapp"></i></a>
-              </div>
-            </div>
-          </div>
+{/* ===== FOUNDER ===== */}
+<section className="founder-section">
+  <div className="container">
+    <motion.h2 
+      className="section-title" 
+      initial={{ opacity: 0 }} 
+      whileInView={{ opacity: 1 }}
+    >
+      The Man Behind ALIVE INC
+    </motion.h2>
+
+    <div className="founder-card">
+      <div className="founder-photo">
+        <img src={ishaquePhoto} alt="Ishaque Khan" />
+        <div className="photo-glow"></div>
+      </div>
+
+      <div className="founder-info">
+        <h3>Ishaque Khan</h3>
+        <p className="role">Founder & CEO</p>
+        <p className="bio">
+          Started from a small room in Vashi with just a laptop and unbreakable willpower.
+          Today leading a team of 50+ warriors serving clients in 15+ countries.
+          <br /><br />
+          <strong>"I don't sell websites. I build digital empires."</strong>
+        </p>
+        <div className="founder-social">
+          <a href="https://instagram.com/ishaque.2004" target="_blank" rel="noreferrer">
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com/in/ishaque-shaikh-2004" target="_blank" rel="noreferrer">
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a href="https://wa.me/919324745058" target="_blank" rel="noreferrer">
+            <i className="fab fa-whatsapp"></i>
+          </a>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* ===== TEAM ===== */}
       <section className="team-section">

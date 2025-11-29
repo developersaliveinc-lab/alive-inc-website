@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";   // YE LINE ADD KI HAI
+import { motion, AnimatePresence } from "framer-motion";
 import { ReactTyped } from "react-typed";
 import "./Portfolio.css";
 
@@ -61,7 +61,7 @@ const projects = [
 ];
 
 const Portfolio = () => {
-  const [selected, setSelected] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   return (
     <div className="portfolio-monster">
@@ -69,7 +69,7 @@ const Portfolio = () => {
       <section className="portfolio-hero">
         <motion.div className="hero-content">
           <h1 className="portfolio-mega-title">
-            OUR <span className="glow-rainbow">PORTFOLIO</span>
+            OUR <span className="glow-red">PORTFOLIO</span>
           </h1>
           <p className="portfolio-subtitle">
             <ReactTyped
@@ -96,23 +96,14 @@ const Portfolio = () => {
               initial={{ opacity: 0, y: 200, rotateX: -90 }}
               whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
               transition={{ delay: i * 0.15, duration: 0.9 }}
-              whileHover={{
-                y: -40,
-                rotateY: 15,
-                rotateX: 10,
-                scale: 1.08,
-                zIndex: 100,
-              }}
-              onClick={() => setSelected(project)}
+              whileHover={{ y: -40, rotateY: 15, rotateX: 10, scale: 1.08, zIndex: 100 }}
+              onClick={() => setSelectedImage(project.img)}
               className={`project-card card-${project.glow}`}
             >
               <div className="card-image">
                 <img src={project.img} alt={project.title} />
                 <div className="card-overlay">
-                  <motion.div
-                    whileHover={{ scale: 1.3 }}
-                    className="view-btn"
-                  >
+                  <motion.div whileHover={{ scale: 1.3 }} className="view-btn">
                     Click to Zoom
                   </motion.div>
                 </div>
@@ -129,38 +120,29 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* LIGHTBOX MODAL */}
+      {/* FULLSCREEN IMAGE MODAL */}
       <AnimatePresence>
-        {selected && (
+        {selectedImage && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="lightbox"
-            onClick={() => setSelected(null)}
+            className="image-modal"
+            onClick={() => setSelectedImage(null)}
           >
-            <motion.div
-              initial={{ scale: 0.7, rotate: -30 }}
-              animate={{ scale: 1, rotate: 0 }}
-              exit={{ scale: 0.7, rotate: 30 }}
+            <motion.img
+              src={selectedImage}
+              alt="Zoomed"
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.8 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="lightbox-content"
+              className="zoomed-image"
               onClick={(e) => e.stopPropagation()}
-            >
-              <img src={selected.img} alt={selected.title} />
-              <div className="lightbox-info">
-                <h2>{selected.title}</h2>
-                <p className="cat">{selected.category}</p>
-                <p className="desc-big">{selected.desc}</p>
-                <p className="tech-big">Built with: {selected.tech}</p>
-                <a href={selected.live} className="live-btn" target="_blank" rel="noopener noreferrer">
-                  View Live Project
-                </a>
-              </div>
-              <button className="close-btn" onClick={() => setSelected(null)}>
-                ×
-              </button>
-            </motion.div>
+            />
+            <button className="close-btn" onClick={() => setSelectedImage(null)}>
+              ×
+            </button>
           </motion.div>
         )}
       </AnimatePresence>

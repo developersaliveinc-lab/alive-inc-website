@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ReactTyped } from "react-typed";
+import { ReactTyped } from "react-typed"; 
 import "./Contact.css";
 
 const Contact = () => {
@@ -18,7 +18,9 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Message Sent:", formData);
-    alert("Thank You! Your message has been sent. Alive Inc will contact you within 24 hours!");
+    alert(
+      "Thank You! Your message has been sent. Alive Inc will contact you within 24 hours!"
+    );
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
@@ -45,15 +47,15 @@ const Contact = () => {
         </motion.div>
       </section>
 
-      {/* MAIN CONTACT SECTION */}
+      {/* FORM + CONTACT INFO */}
       <section className="contact-main">
         <div className="contact-container">
-          {/* LEFT - FORM */}
+          {/* FORM */}
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="contact-form-section"
+            className="contact-form-section vibrant-form"
           >
             <h2 className="form-title">Send Us a Message</h2>
             <form onSubmit={handleSubmit} className="contact-form">
@@ -89,7 +91,7 @@ const Contact = () => {
                 required
               />
               <motion.button
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
                 className="send-btn"
@@ -99,12 +101,12 @@ const Contact = () => {
             </form>
           </motion.div>
 
-          {/* RIGHT - MAP + ADDRESS */}
+          {/* CONTACT INFO */}
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="contact-info-section"
+            className="contact-info-section vibrant-info"
           >
             <h2 className="info-title">Visit Our Office</h2>
             <div className="address-card">
@@ -112,8 +114,7 @@ const Contact = () => {
               <p>
                 Fantasia Nano Wing, <br />
                 Sector 30A, Vashi, <br />
-                Navi Mumbai, Maharashtra 400703 <br />
-                India
+                Navi Mumbai, Maharashtra 400703, India
               </p>
               <p>
                 <strong>Email:</strong> hello@aliveinc.in <br />

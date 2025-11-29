@@ -45,6 +45,27 @@ const Home = () => {
             />
           </motion.p>
 
+          {/* SCROLL ARROW ABOVE CTA */}
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+            className="scroll-indicator-cta"
+          >
+            <svg
+              className="arrow"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </motion.div>
+
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -53,16 +74,6 @@ const Home = () => {
             <a href="#contact" className="cta-btn">
               Start Your Project
             </a>
-          </motion.div>
-
-          <motion.div
-            animate={{ y: [0, 15, 0] }}
-            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-            className="scroll-indicator"
-          >
-            <svg className="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
           </motion.div>
         </div>
       </section>
@@ -81,14 +92,46 @@ const Home = () => {
 
           <div className="services-grid">
             {[
-              { icon: "fas fa-code", title: "Web Development", desc: "React, Next.js, Node.js, Laravel, Django" },
-              { icon: "fab fa-react", title: "Frontend Mastery", desc: "React, Vue, Angular, Tailwind, Framer Motion" },
-              { icon: "fas fa-mobile-alt", title: "Mobile Apps", desc: "React Native, Flutter, iOS, Android" },
-              { icon: "fas fa-brain", title: "AI & ML", desc: "TensorFlow, Python, ChatGPT, Automation" },
-              { icon: "fas fa-cube", title: "Blockchain", desc: "Ethereum, Solana, Smart Contracts, Web3" },
-              { icon: "fas fa-palette", title: "UI/UX Design", desc: "Figma, Adobe XD, 3D Design, Animation" },
-              { icon: "fas fa-cloud", title: "Cloud & DevOps", desc: "AWS, Docker, Kubernetes, CI/CD" },
-              { icon: "fas fa-shield-alt", title: "Cyber Security", desc: "Penetration Testing, Secure Architecture" },
+              {
+                icon: "fas fa-code",
+                title: "Web Development",
+                desc: "React, Next.js, Node.js, Laravel, Django",
+              },
+              {
+                icon: "fab fa-react",
+                title: "Frontend Mastery",
+                desc: "React, Vue, Angular, Tailwind, Framer Motion",
+              },
+              {
+                icon: "fas fa-mobile-alt",
+                title: "Mobile Apps",
+                desc: "React Native, Flutter, iOS, Android",
+              },
+              {
+                icon: "fas fa-brain",
+                title: "AI & ML",
+                desc: "TensorFlow, Python, ChatGPT, Automation",
+              },
+              {
+                icon: "fas fa-cube",
+                title: "Blockchain",
+                desc: "Ethereum, Solana, Smart Contracts, Web3",
+              },
+              {
+                icon: "fas fa-palette",
+                title: "UI/UX Design",
+                desc: "Figma, Adobe XD, 3D Design, Animation",
+              },
+              {
+                icon: "fas fa-cloud",
+                title: "Cloud & DevOps",
+                desc: "AWS, Docker, Kubernetes, CI/CD",
+              },
+              {
+                icon: "fas fa-shield-alt",
+                title: "Cyber Security",
+                desc: "Penetration Testing, Secure Architecture",
+              },
             ].map((service, i) => (
               <motion.div
                 key={i}
@@ -128,7 +171,7 @@ const Home = () => {
               "Cutting-Edge Technology",
               "Affordable & Transparent Pricing",
               "On-Time Delivery",
-              "Free Maintenance (3 Months)"
+              "Free Maintenance (3 Months)",
             ].map((item, i) => (
               <motion.div
                 key={i}
