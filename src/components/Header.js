@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./Header.css";
 import logo from "../images/logo.png";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false); // toggle mobile menu
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -14,18 +24,28 @@ const Header = () => {
       <div className="container">
         {/* Logo */}
         <div className="logo">
-          <Link to="/">
+          <Link to="/" onClick={closeMenu}>
             <img src={logo} alt="Alive Inc Logo" className="logo-img" />
           </Link>
         </div>
 
+        {/* Hamburger Icon */}
+        <div
+          className={`hamburger ${menuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
         {/* Navigation */}
-        <nav className="nav">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/portfolio">Portfolio</Link>
-          <Link to="/contact">Contact</Link>
+        <nav className={`nav ${menuOpen ? "active" : ""}`}>
+          <Link to="/" onClick={closeMenu}>Home</Link>
+          <Link to="/about" onClick={closeMenu}>About</Link>
+          <Link to="/services" onClick={closeMenu}>Services</Link>
+          <Link to="/portfolio" onClick={closeMenu}>Portfolio</Link>
+          <Link to="/contact" onClick={closeMenu}>Contact</Link>
         </nav>
       </div>
     </motion.header>

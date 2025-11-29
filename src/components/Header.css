@@ -17,8 +17,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.5rem;
-  flex-wrap: wrap; /* allow wrapping on small screens */
+  padding: 0 2rem;
+  flex-wrap: wrap;
 }
 
 /* ===== LOGO ===== */
@@ -33,11 +33,12 @@
   filter: drop-shadow(0 0 10px #ff0000);
 }
 
-/* ===== NAV ===== */
+/* ===== NAVIGATION ===== */
 .nav {
   display: flex;
   gap: 2.5rem;
-  flex-wrap: wrap; /* wrap links on small screens */
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
 }
 
 .nav a {
@@ -70,13 +71,39 @@
   width: 100%;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
 
-/* Tablet */
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #cc0000;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
   .logo img.logo-img {
     height: 40px;
   }
+
   .nav {
     gap: 1.5rem;
     justify-content: center;
@@ -84,29 +111,43 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
   .header .container {
-    flex-direction: column; /* stack logo + nav */
+    flex-direction: row; /* keep logo + hamburger in one line */
+    justify-content: space-between;
     align-items: center;
     padding: 0.8rem 1rem;
-    gap: 0.5rem;
   }
 
-  .logo img.logo-img {
-    height: 35px;
+  .hamburger {
+    display: flex;
   }
 
   .nav {
-    flex-direction: column;
-    gap: 0.8rem;
+    position: absolute;
+    top: 65px; /* below header */
+    left: 0;
     width: 100%;
+    flex-direction: column;
     align-items: center;
+    background: #ffffff;
+    max-height: 0;
+    overflow: hidden;
+    gap: 1rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav.active {
+    max-height: 500px; /* adjust if menu is long */
+    padding: 1rem 0;
   }
 
   .nav a {
-    font-size: 0.95rem;
+    font-size: 1rem;
     text-align: center;
-    word-break: break-word;
+    width: 100%;
+    padding: 0.5rem 0;
   }
 }
