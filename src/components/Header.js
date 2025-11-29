@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./Header.css";
-import logo from "../images/logo.png"; // Make sure logo exists in src/images
+import logo from "../images/logo.png";
 
 const Header = () => {
   return (
