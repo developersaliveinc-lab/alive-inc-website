@@ -5,15 +5,10 @@ import "./Header.css";
 import logo from "../images/logo.png";
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false); // toggle mobile menu
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <motion.header
@@ -29,7 +24,7 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Hamburger Icon */}
+        {/* Hamburger */}
         <div
           className={`hamburger ${menuOpen ? "open" : ""}`}
           onClick={toggleMenu}
