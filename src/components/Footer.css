@@ -17,7 +17,7 @@
   align-items: flex-start;
 }
 
-/* Left Side - Quick Links */
+/* Footer Section Headings */
 .footer-nav h3,
 .footer-services h3,
 .footer-contact h3 {
@@ -26,6 +26,7 @@
   font-size: 18px;
 }
 
+/* Quick Links and Services Lists */
 .footer-nav ul,
 .footer-services ul {
   list-style: none;
@@ -50,7 +51,7 @@
   color: #ff3333;
 }
 
-/* Right Side - Contact */
+/* Contact Info */
 .footer-contact p {
   margin: 6px 0;
   color: #ddd;
@@ -148,14 +149,31 @@
 @media (max-width: 968px) {
   .footer-container {
     flex-direction: column; /* stacked column */
-    text-align: center;
-    gap: 25px;
+    text-align: center; /* center everything */
+    gap: 30px;
     align-items: center;
+  }
+
+  .footer-nav,
+  .footer-services,
+  .footer-contact {
+    width: 100%; /* full width sections */
+    max-width: 400px; /* optional limit */
+    margin: 0 auto; /* center each section */
+  }
+
+  .footer-nav ul,
+  .footer-services ul {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center; /* center list items */
   }
 
   .footer-nav ul li,
   .footer-services ul li {
-    font-size: 14px; /* line by line */
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block; /* stacked items */
   }
 
   .footer-social a {
@@ -167,7 +185,7 @@
   .footer-nav ul li,
   .footer-services ul li {
     font-size: 13px;
-    line-height: 1.8; /* line by line spacing */
+    line-height: 1.8; /* line spacing */
   }
 
   .footer-logo {
