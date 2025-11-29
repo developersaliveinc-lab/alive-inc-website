@@ -5,7 +5,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* ===== HERO SECTION / SLIDER ===== */
+/* HERO SECTION */
 .contact-hero {
   height: 100vh;
   display: flex;
@@ -37,7 +37,7 @@
   text-shadow: 0 0 5px #aaa;
 }
 
-/* ===== MAIN CONTACT ===== */
+/* MAIN CONTACT */
 .contact-main {
   padding: 120px 20px;
   display: flex;
@@ -51,7 +51,7 @@
   gap: 60px;
 }
 
-/* ===== FORM SECTION ===== */
+/* FORM SECTION */
 .contact-form-section {
   background: linear-gradient(145deg, #111, #1a1a1a);
   padding: 60px 40px;
@@ -60,6 +60,8 @@
   box-shadow: 0 0 60px #ff0000;
   position: relative;
   overflow: hidden;
+  max-width: 600px; /* limit width */
+  margin: 0 auto;   /* center horizontally */
 }
 
 .contact-form-section::before {
@@ -100,12 +102,12 @@
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 20px;
+  padding: 18px;
   border: 2px solid #ff0000;
-  border-radius: 15px;
+  border-radius: 12px;
   background: #000;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
 }
 
@@ -126,10 +128,10 @@
 /* SEND BUTTON */
 .send-btn {
   width: 100%;
-  padding: 25px;
+  padding: 20px;
   background: linear-gradient(90deg, #ff0000, #ff5555, #ff0000);
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
   border: none;
   border-radius: 50px;
@@ -144,7 +146,7 @@
   box-shadow: 0 0 100px #ff5555;
 }
 
-/* ===== VISIT OUR OFFICE ===== */
+/* CONTACT INFO */
 .contact-info-section {
   background: linear-gradient(145deg, #111, #1a1a1a);
   padding: 60px 40px;
@@ -184,7 +186,7 @@
   box-shadow: 0 0 50px #ff0000;
 }
 
-/* ===== FINAL CTA ===== */
+/* FINAL CTA */
 .final-cta {
   text-align: center;
   padding: 100px 20px;
@@ -203,7 +205,7 @@
   color: #fff;
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
   .contact-mega-title { font-size: 4.5rem; }
   .contact-subtitle { font-size: 1.8rem; }
@@ -214,12 +216,14 @@
   .contact-mega-title { font-size: 3rem; letter-spacing: 6px; }
   .contact-subtitle { font-size: 1.4rem; }
   .form-title, .info-title { font-size: 2rem; }
-  .send-btn { font-size: 1.5rem; padding: 18px; }
+  .send-btn { font-size: 1.3rem; padding: 15px; }
+  .contact-form-section { max-width: 90%; }
 }
 
 @media (max-width: 480px) {
   .contact-mega-title { font-size: 2.5rem; letter-spacing: 4px; }
   .contact-subtitle { font-size: 1.2rem; }
   .form-title, .info-title { font-size: 1.5rem; }
-  .send-btn { font-size: 1.3rem; padding: 15px; }
+  .send-btn { font-size: 1.2rem; padding: 12px; }
+  .contact-form-section { padding: 30px 15px; }
 }

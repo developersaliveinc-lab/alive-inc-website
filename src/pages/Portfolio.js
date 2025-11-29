@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { ReactTyped } from "react-typed";  // ← yehi line laga de
 import { motion, AnimatePresence } from "framer-motion";
-import { ReactTyped } from "react-typed";
+
 import "./Portfolio.css";
 
 const projects = [

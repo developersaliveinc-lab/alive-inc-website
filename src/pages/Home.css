@@ -1,3 +1,4 @@
+/* src/pages/Home.css */
 /* ===== HERO SECTION ===== */
 .hero-section {
   min-height: 100vh;
@@ -6,13 +7,13 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: #ffffff; /* White background */
+  background: #ffffff;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.05); /* subtle overlay */
+  background: rgba(0, 0, 0, 0.05);
   z-index: 1;
 }
 
@@ -78,7 +79,7 @@
   box-shadow: 0 0 80px rgba(255, 0, 0, 0.9);
 }
 
-/* ===== SCROLL ARROW ABOVE CTA ===== */
+/* ===== SCROLL ARROW ===== */
 .scroll-indicator-cta {
   margin-bottom: 20px;
   display: flex;
@@ -91,14 +92,13 @@
   color: #ff0000;
 }
 
-/* ===== SERVICES SECTION (Our Expertise) ===== */
+/* ===== SERVICES SECTION ===== */
 .services-section {
   padding: 120px 20px;
   background: #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .section-title {
@@ -114,7 +114,6 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
   justify-content: center;
-  align-items: start;
 }
 
 .service-card {
@@ -165,7 +164,7 @@
   color: #ffffff;
 }
 
-/* ===== WHY CHOOSE US SECTION ===== */
+/* ===== WHY CHOOSE US ===== */
 .why-section {
   padding: 120px 20px;
   background: #ff9999;

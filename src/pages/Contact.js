@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { ReactTyped } from "react-typed"; 
+
+import { ReactTyped } from "react-typed";
 import "./Contact.css";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({

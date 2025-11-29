@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+
 import { ReactTyped } from "react-typed";
 import "./About.css";
-
+import { motion, AnimatePresence } from "framer-motion";
 // ===== FOUNDER PHOTO =====
 const ishaquePhoto = "/images/ishaque.jpg";
 

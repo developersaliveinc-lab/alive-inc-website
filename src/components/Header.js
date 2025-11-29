@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+
+import { motion, AnimatePresence } from "framer-motion";
 import "./Header.css";
 import logo from "../images/logo.png"; // ✅ Import your logo from src/images
 

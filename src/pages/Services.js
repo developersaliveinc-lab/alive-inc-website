@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Typed } from "react-typed";
 import { motion, AnimatePresence } from "framer-motion";
-import Typed from "typed.js";
 import "./Services.css";
 
 const TypedHero = ({ strings }) => {
