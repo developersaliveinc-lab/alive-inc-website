@@ -1,12 +1,33 @@
-// src/pages/Home.js
 import React from "react";
 import { ReactTyped } from "react-typed";    // SAHI IMPORT
 import ParticlesBG from "../components/ParticlesBG";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import "./Home.css";
 
 const Home = () => {
+  const services = [
+    { icon: "fas fa-code", title: "Web Development", desc: "React, Next.js, Node.js, Laravel, Django" },
+    { icon: "fab fa-react", title: "Frontend Mastery", desc: "React, Vue, Angular, Tailwind" },
+    { icon: "fas fa-mobile-alt", title: "Mobile Apps", desc: "React Native, Flutter, iOS, Android" },
+    { icon: "fas fa-brain", title: "AI & ML", desc: "TensorFlow, Python, ChatGPT, Automation" },
+    { icon: "fas fa-cube", title: "Blockchain", desc: "Ethereum, Solana, Smart Contracts, Web3" },
+    { icon: "fas fa-palette", title: "UI/UX Design", desc: "Figma, Adobe XD, 3D Design" },
+    { icon: "fas fa-cloud", title: "Cloud & DevOps", desc: "AWS, Docker, Kubernetes, CI/CD" },
+    { icon: "fas fa-shield-alt", title: "Cyber Security", desc: "Penetration Testing, Secure Architecture" },
+  ];
+
+  const whyChoose = [
+    "10+ Years Experience",
+    "500+ Projects Delivered",
+    "24/7 Dedicated Support",
+    "100% Client Satisfaction",
+    "Cutting-Edge Technology",
+    "Affordable & Transparent Pricing",
+    "On-Time Delivery",
+    "Free Maintenance (3 Months)",
+  ];
+
   return (
     <>
       {/* HERO SECTION */}
@@ -14,11 +35,9 @@ const Home = () => {
         <ParticlesBG />
         <div className="hero-overlay" />
         <div className="hero-content">
-
           <h1 className="main-title">
             <span className="gradient-text">ALIVE INC</span>
           </h1>
-
           <p className="subtitle">
             We Build The Future With{" "}
             <ReactTyped
@@ -51,7 +70,6 @@ const Home = () => {
           <a href="/contact" className="cta-btn">
             Start Your Project
           </a>
-
         </div>
       </section>
 
@@ -59,27 +77,19 @@ const Home = () => {
       <section className="services-section" id="services">
         <div className="container">
           <h2 className="section-title">Our Expertise</h2>
-
           <div className="services-grid">
-            {[
-              { icon: "fas fa-code", title: "Web Development", desc: "React, Next.js, Node.js, Laravel, Django" },
-              { icon: "fab fa-react", title: "Frontend Mastery", desc: "React, Vue, Angular, Tailwind" },
-              { icon: "fas fa-mobile-alt", title: "Mobile Apps", desc: "React Native, Flutter, iOS, Android" },
-              { icon: "fas fa-brain", title: "AI & ML", desc: "TensorFlow, Python, ChatGPT, Automation" },
-              { icon: "fas fa-cube", title: "Blockchain", desc: "Ethereum, Solana, Smart Contracts, Web3" },
-              { icon: "fas fa-palette", title: "UI/UX Design", desc: "Figma, Adobe XD, 3D Design" },
-              { icon: "fas fa-cloud", title: "Cloud & DevOps", desc: "AWS, Docker, Kubernetes, CI/CD" },
-              { icon: "fas fa-shield-alt", title: "Cyber Security", desc: "Penetration Testing, Secure Architecture" },
-            ].map((service, i) => (
-              <div
+            {services.map((service, i) => (
+              <motion.div
                 key={i}
                 className="service-card"
-                style={{ animation: `fadeUp 0.6s ease-out forwards`, animationDelay: `${i * 0.1}s` }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
               >
                 <i className={`${service.icon} service-icon`}></i>
                 <h3>{service.title}</h3>
                 <p>{service.desc}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -90,23 +100,16 @@ const Home = () => {
         <div className="container">
           <h2 className="section-title white">Why Choose Alive Inc?</h2>
           <div className="why-grid">
-            {[
-              "10+ Years Experience",
-              "500+ Projects Delivered",
-              "24/7 Dedicated Support",
-              "100% Client Satisfaction",
-              "Cutting-Edge Technology",
-              "Affordable & Transparent Pricing",
-              "On-Time Delivery",
-              "Free Maintenance (3 Months)",
-            ].map((item, i) => (
-              <div
+            {whyChoose.map((item, i) => (
+              <motion.div
                 key={i}
                 className="why-card"
-                style={{ animation: `popIn 0.6s ease-out forwards`, animationDelay: `${i * 0.15}s` }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
               >
                 {item}
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

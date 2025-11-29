@@ -1,4 +1,3 @@
-/* src/pages/Home.css */
 /* ===== HERO SECTION ===== */
 .hero-section {
   min-height: 100vh;
@@ -109,11 +108,13 @@
   text-shadow: 0 0 5px #ffffff;
 }
 
+/* Horizontal grid: 3 cards per row */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  justify-content: center;
+  justify-items: center;
+  width: 100%;
 }
 
 .service-card {
@@ -147,27 +148,18 @@
 .service-card h3 {
   font-size: 1.6rem;
   margin-top: 20px;
-  color: #000000;
-}
-
-.service-card:hover h3 {
-  color: #ffffff;
 }
 
 .service-card p {
   font-size: 1.2rem;
-  color: #000000;
   line-height: 1.6;
-}
-
-.service-card:hover p {
-  color: #ffffff;
 }
 
 /* ===== WHY CHOOSE US ===== */
 .why-section {
   padding: 120px 20px;
-  background: #ff9999;
+  background: #dbd0c8;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -175,7 +167,7 @@
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* horizontal 4 per row */
   gap: 40px;
   justify-content: center;
 }
@@ -200,11 +192,13 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
   .section-title { font-size: 3.2rem; }
 }
 
 @media (max-width: 768px) {
-  .section-title { font-size: 2.6rem; }
+  .services-grid, .why-grid { grid-template-columns: 1fr; }
   .service-card, .why-card { padding: 30px 15px; }
   .service-card p { font-size: 1rem; }
   .why-card { font-size: 1.3rem; }
@@ -213,7 +207,7 @@
 }
 
 @media (max-width: 480px) {
-  .section-title { font-size: 2rem; }
+  .section-title { font-size: 2rem; margin-bottom: 40px; }
   .service-card, .why-card { padding: 25px 10px; font-size: 1rem; }
   .service-card p { font-size: 0.95rem; }
   .why-card { font-size: 1.1rem; }
