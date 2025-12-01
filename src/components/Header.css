@@ -1,6 +1,5 @@
-/* Header Base */
 .header {
-  background: white;
+  background:white;
   padding: 1rem 0;
   position: fixed;
   width: 100%;
@@ -29,14 +28,13 @@
   transform: scale(1.05);
 }
 
-/* Navigation */
 .nav {
   display: flex;
   gap: 2.5rem;
 }
 
 .nav a {
-  color: #e00a0a;
+  color: red;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 600;
@@ -65,17 +63,15 @@
   width: 100%;
 }
 
-/* Hamburger Button */
 .menu-btn {
   display: none;
   font-size: 2rem;
-  color: #fff;
+  color: red;
   background: none;
   border: none;
   cursor: pointer;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .nav {
     gap: 1.5rem;

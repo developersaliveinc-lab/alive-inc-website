@@ -85,7 +85,6 @@
   transform: scale(1.15);
 }
 
-/* LOGO WALA PART – AB KABHI GAYAB NAHI HOGA */
 .footer-logo-section {
   width: 100%;
   text-align: center;
@@ -101,7 +100,6 @@
   margin: 0 auto;
 }
 
-/* Bottom Part */
 .footer-bottom {
   border-top: 1px solid #3344cc;
   padding-top: 20px;
@@ -131,7 +129,6 @@
   height: 55px;
   border-radius: 50%;
   text-align: center;
-  center;
   line-height: 55px;
   font-size: 24px;
   cursor: pointer;

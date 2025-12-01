@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./Header.css";
-import logo from "../images/logo.png"; // make sure path is correct
+import logo from "../images/logo.png"; // uploaded logo
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,11 +11,7 @@ const Header = () => {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className="header"
-    >
+    <motion.header initial={{ y: -100 }} animate={{ y: 0 }} className="header">
       <div className="container">
         {/* Logo */}
         <div className="logo">
@@ -25,9 +21,7 @@ const Header = () => {
         </div>
 
         {/* Hamburger Menu Button */}
-        <button className="menu-btn" onClick={toggleMenu}>
-          ☰
-        </button>
+        <button className="menu-btn" onClick={toggleMenu}>☰</button>
 
         {/* Navigation */}
         <nav className={`nav ${menuOpen ? "active" : ""}`}>
