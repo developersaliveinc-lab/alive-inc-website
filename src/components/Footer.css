@@ -2,21 +2,20 @@
   background: #162b2f;
   color: #fff;
   font-family: 'Arial', sans-serif;
-  padding: 7px 45px 22px; /* ⭐ Updated from your inspect */
+  padding: 20px 40px;
   text-align: center;
 }
 
-/* Footer Main Sections Horizontal */
+/* Footer Main Sections */
 .footer-sections {
   display: flex;
-  justify-content: center;
-  gap: 60px;
+  justify-content: space-between;
+  gap: 40px;
   flex-wrap: wrap;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-/* Footer Headings */
 .footer-nav h3,
 .footer-services h3,
 .footer-contact h3 {
@@ -25,7 +24,6 @@
   font-size: 18px;
 }
 
-/* Lists */
 .footer-nav ul,
 .footer-services ul {
   list-style: none;
@@ -50,7 +48,6 @@
   color: #ff3333;
 }
 
-/* Contact Info */
 .footer-contact p {
   margin: 4px 0;
   color: #ddd;
@@ -66,7 +63,6 @@
   color: #ff3333;
 }
 
-/* Social Icons */
 .footer-social {
   margin-top: 10px;
 }
@@ -91,15 +87,17 @@
   transform: scale(1.1);
 }
 
-/* ⭐ Footer Logo EXACT as your inspect */
+/* Footer Logo */
 .footer-logo-section {
-  text-align: right;        /* ⭐ your inspect */
-  margin: -76px 47px 3px;   /* ⭐ your inspect */
-  margin-right: 170px;      /* ⭐ your inspect overwrite */
+  text-align: center;
+  margin: 20px 0;
 }
 
 .footer-logo {
-  height: 51px;             /* ⭐ your inspect */
+  height: 50px;
+  max-width: 90%;
+  object-fit: contain;
+  display: inline-block;
   background: transparent;
 }
 
@@ -150,14 +148,10 @@
 
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .footer-logo {
-    height: 50px;
-  }
-
   .footer-sections {
-    gap: 30px;
     flex-direction: column;
     text-align: center;
+    gap: 25px;
   }
 
   .footer-nav ul li,
@@ -170,10 +164,8 @@
     font-size: 12px;
   }
 
-  /* mobile me logo center rahega */
-  .footer-logo-section {
-    text-align: center;
-    margin: 10px auto;
-    margin-right: 0px;
+  .footer-logo {
+    height: 45px;
+    max-width: 80%;
   }
 }
