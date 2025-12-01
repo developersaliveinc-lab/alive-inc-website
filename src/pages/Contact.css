@@ -1,5 +1,5 @@
 .contact-monster {
-  background: #000;
+  background: red;
   color: #fff;
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
@@ -22,20 +22,20 @@
   font-size: 5rem;
   font-weight: 900;
   letter-spacing: 8px;
-  color: #ff0000;
-  text-shadow: 0 0 15px #ff8888, 0 0 30px #ff5555;
+  color: black;
+
 }
 
 .glow-cyan {
-  color: #ff0000;
-  text-shadow: 0 0 15px #ff8888, 0 0 30px #ff5555;
+  color:black;
+ 
 }
 
 .contact-subtitle {
   font-size: 2rem;
   margin-top: 20px;
-  color: #111;
-  text-shadow: 0 0 5px #aaa;
+  color: red;
+  
 }
 
 /* MAIN CONTACT */
@@ -146,7 +146,7 @@
 
 .send-btn:hover {
   transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 0 100px #b63a3a;
+  box-shadow: 0 0 100px #969191;
 }
 
 /* CONTACT INFO */
@@ -155,7 +155,7 @@
   padding: 60px 40px;
   border-radius: 25px;
   border: 2px solid #ff0000;
-  box-shadow: 0 0 60px #f3eded;
+  
   width: 100%;
   max-width: 600px;
 }

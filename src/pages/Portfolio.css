@@ -29,14 +29,14 @@
   font-weight: 900;
   letter-spacing: 12px;
   margin: 0;
-  color: red;
-  text-shadow:red;
+  color: black;
+
 }
 
 .portfolio-subtitle {
   font-size: 3rem;
   margin-top: 20px;
-  color: #000;
+  color:red;
   font-weight: bold;
 }
 
