@@ -1,27 +1,26 @@
 .alive-footer {
-  background: #162b2f;
+  background: #1622f2;
   color: #fff;
-  font-family: 'Arial', sans-serif;
-  padding: 20px 40px;
-  text-align: center;
+  padding: 50px 40px 20px;
+  font-family: Arial, sans-serif;
 }
 
-/* Footer Main Sections */
 .footer-sections {
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  justify-content: center;
+  gap: 80px;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
   text-align: left;
-  margin-bottom: 30px;
 }
 
 .footer-nav h3,
 .footer-services h3,
 .footer-contact h3 {
   color: #ff3333;
-  margin-bottom: 10px;
-  font-size: 18px;
+  margin-bottom: 15px;
+  font-size: 19px;
 }
 
 .footer-nav ul,
@@ -33,25 +32,25 @@
 
 .footer-nav ul li,
 .footer-services ul li {
-  margin-bottom: 6px;
-  font-size: 14px;
-  color: #ccc;
+  margin-bottom: 8px;
+  font-size: 14.5px;
+  color: #ddd;
 }
 
-.footer-nav ul li a {
+.footer-nav a {
   color: #ccc;
   text-decoration: none;
   transition: 0.3s;
 }
 
-.footer-nav ul li a:hover {
+.footer-nav a:hover {
   color: #ff3333;
 }
 
 .footer-contact p {
-  margin: 4px 0;
-  color: #ddd;
-  font-size: 14px;
+  margin: 8px 0;
+  color: #eee;
+  font-size: 15px;
 }
 
 .footer-contact a {
@@ -64,108 +63,84 @@
 }
 
 .footer-social {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .footer-social a {
   display: inline-block;
+  width: 40px;
+  height: 40px;
   background: #333;
-  color: #fff;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
+  color: white;
   text-align: center;
-  line-height: 35px;
-  margin: 0 5px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 0 8px;
   font-weight: bold;
-  text-decoration: none;
   transition: 0.3s;
 }
 
 .footer-social a:hover {
-  background: black;
-  transform: scale(1.1);
+  background: #000;
+  transform: scale(1.15);
 }
 
-/* Footer Logo */
+/* LOGO WALA PART – AB KABHI GAYAB NAHI HOGA */
 .footer-logo-section {
+  width: 100%;
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 0 40px 0;
+  padding: 20px 0;
 }
 
 .footer-logo {
-  height: 50px;
-  max-width: 90%;
-  object-fit: contain;
-  display: inline-block;
-  background: transparent;
+  height: 75px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
-/* Footer Bottom */
+/* Bottom Part */
 .footer-bottom {
-  border-top: 1px solid #0f1a22;
-  padding-top: 15px;
-  font-size: 13px;
-  color: #aaa;
-  line-height: 1.6;
+  border-top: 1px solid #3344cc;
+  padding-top: 20px;
   text-align: center;
+  font-size: 13.5px;
+  color: #aaa;
+  line-height: 1.7;
 }
 
 .footer-links a {
   color: #aaa;
-  margin: 0 5px;
   text-decoration: none;
+  margin: 0 8px;
 }
 
 .footer-links a:hover {
   color: #ff3333;
 }
 
-/* Scroll Top Button */
 .scroll-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 30px;
+  right: 30px;
   background: #ff3333;
-  color: #fff;
-  width: 50px;
-  height: 50px;
+  color: white;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
-  font-size: 18px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  center;
+  line-height: 55px;
+  font-size: 24px;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  z-index: 999;
-  transition: transform 0.3s;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
 }
 
 .scroll-top:hover {
-  transform: scale(1.1);
-}
-
-/* ===== MOBILE RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .footer-sections {
-    flex-direction: column;
-    text-align: center;
-    gap: 25px;
-  }
-
-  .footer-nav ul li,
-  .footer-services ul li,
-  .footer-contact p {
-    font-size: 13px;
-  }
-
-  .footer-bottom {
-    font-size: 12px;
-  }
-
-  .footer-logo {
-    height: 45px;
-    max-width: 80%;
-  }
+  background: #ff0000;
+  transform: translateY(-5px);
 }

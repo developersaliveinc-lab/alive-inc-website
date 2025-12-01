@@ -9,11 +9,11 @@ import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 
-const App = () => {
+function App() {
   return (
     <>
       <Header />
-      <ScrollToTop />
+      <ScrollToTop /> {/* Ye ensure karega har route pe scroll top */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -23,6 +23,6 @@ const App = () => {
       </Routes>
     </>
   );
-};
+}
 
 export default App;

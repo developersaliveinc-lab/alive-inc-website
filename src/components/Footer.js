@@ -70,15 +70,13 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="footer-bottom">
         <p>© {year} Alive Inc. All Rights Reserved</p>
-        <p>
-          Websites: metungtech.com | slot938.com | thaicasinobin.com | jqk41.com | thaibet55.com | kuyuluk.com | soccer918.com | huc999.casino | krooree.com | slot5599.com
-        </p>
+        <p>Websites: metungtech.com | slot938.com | thaicasinobin.com | jqk41.com | thaibet55.com | kuyuluk.com | soccer918.com | huc999.casino | krooree.com | slot5599.com</p>
         <div className="footer-links">
           <Link to="/privacy">Privacy</Link> | <Link to="/sitemap">Sitemap</Link>
         </div>
       </div>
 
-      {/* Scroll Up */}
+      {/* Scroll Top */}
       <div className="scroll-top" onClick={scrollTop}>↑</div>
     </footer>
   );

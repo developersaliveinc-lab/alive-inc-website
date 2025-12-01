@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./Header.css";
-import logo from "../images/logo.png";
+import logo from "../images/logo.png"; // make sure path is correct
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,15 +24,10 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Hamburger */}
-        <div
-          className={`hamburger ${menuOpen ? "open" : ""}`}
-          onClick={toggleMenu}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        {/* Hamburger Menu Button */}
+        <button className="menu-btn" onClick={toggleMenu}>
+          ☰
+        </button>
 
         {/* Navigation */}
         <nav className={`nav ${menuOpen ? "active" : ""}`}>
