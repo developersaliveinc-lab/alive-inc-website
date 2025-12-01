@@ -76,7 +76,7 @@
 
 .cta-btn:hover {
   transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 0 80px rgba(255, 0, 0, 0.9);
+  box-shadow: 0 0 80px rgba(189, 14, 14, 0.9);
 }
 
 /* ===== SCROLL ARROW ===== */

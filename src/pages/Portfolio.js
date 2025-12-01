@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { ReactTyped } from "react-typed";  // ← yehi line laga de
+import { ReactTyped } from "react-typed";  
 import { motion, AnimatePresence } from "framer-motion";
-
 import "./Portfolio.css";
 
 const projects = [
@@ -14,15 +13,16 @@ const projects = [
     live: "#",
     glow: "cyan",
   },
-  {
-    title: "AI Nexus Dashboard",
-    category: "AI • Machine Learning • SaaS",
-    desc: "Real-time AI Analytics Platform for Enterprises",
-    tech: "Next.js • Python • TensorFlow • AWS",
-    img: "https://images.unsplash.com/photo-1558655146-9f40138ed1cb?w=800&q=80",
-    live: "#",
-    glow: "purple",
-  },
+ {
+  title: "AI Nexus Dashboard",
+  category: "AI • Machine Learning • SaaS",
+  desc: "Real-time AI Analytics Platform for Enterprises",
+  tech: "Next.js • Python • TensorFlow • AWS",
+  img: "/images/myphoto.jpg",  // Aapki personal photo ya project screenshot
+  live: "#",
+  glow: "purple",
+}
+,
   {
     title: "AlivePay Wallet",
     category: "Mobile • Blockchain • FinTech",

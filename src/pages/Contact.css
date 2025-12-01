@@ -140,13 +140,13 @@
   border-radius: 50px;
   cursor: pointer;
   margin-top: 20px;
-  box-shadow: 0 0 60px #ff0000;
+  box-shadow: 0 0 60px #b83232;
   transition: all 0.3s ease;
 }
 
 .send-btn:hover {
   transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 0 100px #ff5555;
+  box-shadow: 0 0 100px #b63a3a;
 }
 
 /* CONTACT INFO */
@@ -155,7 +155,7 @@
   padding: 60px 40px;
   border-radius: 25px;
   border: 2px solid #ff0000;
-  box-shadow: 0 0 60px #ff0000;
+  box-shadow: 0 0 60px #f3eded;
   width: 100%;
   max-width: 600px;
 }
