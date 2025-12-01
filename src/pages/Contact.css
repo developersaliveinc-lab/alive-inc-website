@@ -1,5 +1,6 @@
 .contact-monster {
-  background: red;
+  background: #fbfbfb
+  ;
   color: #fff;
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
@@ -59,7 +60,7 @@
   padding: 60px 40px;
   border-radius: 25px;
   border: 2px solid #ff0000;
-  box-shadow: 0 0 60px #ff0000;
+
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -73,7 +74,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(60deg, #ff0000, #ff5500, #ff0000, #ff5500);
+  background: black;
   animation: rotateGradient 8s linear infinite;
   z-index: 0;
   opacity: 0.1;
@@ -87,7 +88,7 @@
 .form-title {
   font-size: 3rem;
   text-align: center;
-  color: #ff0000;
+  color: white;
   margin-bottom: 50px;
   position: relative;
   z-index: 1;
@@ -123,24 +124,24 @@
 .contact-form textarea:focus {
   outline: none;
   border-color: #ff5555;
-  box-shadow: 0 0 25px #ff5555;
+ 
   background: #111;
   transform: scale(1.02);
 }
 
 /* SEND BUTTON */
 .send-btn {
-  width: 100%;
+  width: 50%;
   padding: 20px;
-  background: linear-gradient(90deg, #ff0000, #ff5555, #ff0000);
+  background: red;
   color: #fff;
   font-size: 1.5rem;
   font-weight: bold;
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  margin-top: 20px;
-  box-shadow: 0 0 60px #b83232;
+  margin: 20px auto ;
+
   transition: all 0.3s ease;
 }
 
@@ -163,7 +164,7 @@
 .info-title {
   font-size: 3rem;
   text-align: center;
-  color: #ff0000;
+  color: #f5f2f2;
   margin-bottom: 40px;
 }
 
@@ -180,7 +181,7 @@
 }
 
 .address-card:hover {
-  box-shadow: 0 0 50px #ff5555;
+
   transform: translateY(-5px);
 }
 
@@ -188,7 +189,7 @@
   margin-top: 30px;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 0 50px #ff0000;
+
 }
 
 /* FINAL CTA */
@@ -200,14 +201,14 @@
 
 .mega-glow {
   font-size: 3rem;
-  color: #ff0000;
-  text-shadow: 0 0 80px #ff5555, 0 0 120px #ff0000;
+  color: #ffffff;
+ 
 }
 
 .final-cta p {
   font-size: 1.8rem;
   margin-top: 20px;
-  color: #fff;
+  color: #f30000;
 }
 
 /* ====== RESPONSIVE ====== */

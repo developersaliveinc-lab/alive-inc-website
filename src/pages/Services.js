@@ -3,6 +3,7 @@ import { Typed } from "react-typed";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Services.css";
 
+// ===== TYPED HERO =====
 const TypedHero = ({ strings }) => {
   const el = useRef(null);
 
@@ -13,13 +14,13 @@ const TypedHero = ({ strings }) => {
       backSpeed: 30,
       loop: true,
     });
-
     return () => typed.destroy();
   }, [strings]);
 
   return <span ref={el}></span>;
 };
 
+// ===== SERVICE SLIDES =====
 const serviceSlides = [
   {
     title: "WEB DEVELOPMENT",
@@ -79,6 +80,7 @@ const serviceSlides = [
   },
 ];
 
+// ===== TESTIMONIALS =====
 const testimonials = [
   {
     name: "Rahul Sharma",
@@ -96,8 +98,10 @@ const testimonials = [
   },
 ];
 
+// ===== TECHNOLOGIES =====
 const technologies = [
-  "React", "Next.js", "Node.js", "Laravel", "React Native", "Flutter", "AWS", "Docker", "Kubernetes", "Python", "Figma", "Framer", "SEO", "AI/ML"
+  "React", "Next.js", "Node.js", "Laravel", "React Native", "Flutter", "AWS",
+  "Docker", "Kubernetes", "Python", "Figma", "Framer", "SEO", "AI/ML"
 ];
 
 const Services = () => {
@@ -105,6 +109,7 @@ const Services = () => {
   const touchStart = useRef(0);
   const touchEnd = useRef(0);
 
+  // Auto-slide
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % serviceSlides.length);
@@ -112,6 +117,7 @@ const Services = () => {
     return () => clearInterval(timer);
   }, []);
 
+  // Swipe gestures
   const handleTouchStart = (e) => (touchStart.current = e.changedTouches[0].clientX);
   const handleTouchEnd = (e) => {
     touchEnd.current = e.changedTouches[0].clientX;
@@ -217,6 +223,32 @@ const Services = () => {
         </div>
       </section>
 
+      {/* EXTRA SERVICES HIGHLIGHT */}
+      <section className="extra-services">
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          Highlight Services
+        </motion.h2>
+        <div className="extra-services-grid">
+          {serviceSlides.map((service, i) => (
+            <motion.div
+              key={i}
+              className="extra-service-card"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              whileHover={{ scale: 1.05, y: -5 }}
+            >
+              <h3>{service.title}</h3>
+              <p>{service.subtitle}</p>
+              <p>{service.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       {/* TECHNOLOGIES SECTION */}
       <section className="tech-section">
         <div className="container">
@@ -279,7 +311,6 @@ const Services = () => {
           </motion.a>
         </div>
       </section>
-
     </div>
   );
 };

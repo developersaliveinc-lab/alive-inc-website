@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../images/logo.png"; // ✅ Logo path
 import "./Footer.css";
 
 const Footer = () => {
@@ -12,9 +11,9 @@ const Footer = () => {
 
   return (
     <footer className="alive-footer">
-      {/* Footer Container */}
-      <div className="footer-container">
-        {/* Left Side - Quick Links */}
+      {/* Footer Main Sections */}
+      <div className="footer-sections">
+        {/* Quick Links */}
         <div className="footer-nav">
           <h3>Quick Links</h3>
           <ul>
@@ -26,7 +25,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Center - Our Services */}
+        {/* Our Services */}
         <div className="footer-services">
           <h3>Our Services</h3>
           <ul>
@@ -46,7 +45,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Right Side - Contact Info */}
+        {/* Contact Info */}
         <div className="footer-contact">
           <h3>Alive Inc - Head Office</h3>
           <p>📞 +91 9324745058</p>
@@ -63,12 +62,12 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Footer Logo */}
+      {/* Footer Logo under Services/Contact */}
       <div className="footer-logo-section">
-        <img src={logo} alt="Alive Inc Logo" className="footer-logo" />
+        <img src="/images/footer-logo.png" alt="Alive Inc Logo" className="footer-logo" />
       </div>
 
-      {/* Bottom Section */}
+      {/* Footer Bottom */}
       <div className="footer-bottom">
         <p>© {year} Alive Inc. All Rights Reserved</p>
         <p>

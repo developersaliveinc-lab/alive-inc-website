@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-
 import { ReactTyped } from "react-typed";
 import "./About.css";
 import { motion, AnimatePresence } from "framer-motion";
+
 // ===== FOUNDER PHOTO =====
 const ishaquePhoto = "/images/ishaque.jpg";
 
@@ -105,7 +105,10 @@ const About = () => {
       {/* ===== OUR EXPERTISE ===== */}
       <section className="services-section">
         <div className="container">
-          <motion.h2 className="section-title" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>Our Expertise</motion.h2>
+          <motion.h2 className="section-title" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+            Our Expertise
+          </motion.h2>
+
           <div className="services-grid">
             {[
               { icon: "fas fa-code", title: "Web Development", desc: "React, Next.js, Node.js, Laravel, Django" },
@@ -132,53 +135,50 @@ const About = () => {
         </div>
       </section>
 
-{/* ===== FOUNDER ===== */}
-<section className="founder-section">
-  <div className="container">
-    <motion.h2 
-      className="section-title" 
-      initial={{ opacity: 0 }} 
-      whileInView={{ opacity: 1 }}
-    >
-      The Man Behind ALIVE INC
-    </motion.h2>
+      {/* ===== FOUNDER ===== */}
+      <section className="founder-section">
+        <div className="container">
+          <motion.h2 className="section-title" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+            The Man Behind ALIVE INC
+          </motion.h2>
 
-    <div className="founder-card">
-      <div className="founder-photo">
-        <img src={ishaquePhoto} alt="Ishaque Khan" />
-        <div className="photo-glow"></div>
-      </div>
+          <div className="founder-card">
+            <div className="founder-photo">
+              <img src={ishaquePhoto} alt="Ishaque Khan" />
+              <div className="photo-glow"></div>
+            </div>
 
-      <div className="founder-info">
-        <h3>khabib nurmagomedov</h3>
-        <p className="role">Founder & CEO</p>
-        <p className="bio">
-          Started from a small room in Vashi with just a laptop and unbreakable willpower.
-          Today leading a team of 50+ warriors serving clients in 15+ countries.
-          <br /><br />
-          <strong>"I don't sell websites. I build digital empires."</strong>
-        </p>
-        <div className="founder-social">
-          <a href="https://instagram.com/ishaque.2004" target="_blank" rel="noreferrer">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="https://linkedin.com/in/ishaque-shaikh-2004" target="_blank" rel="noreferrer">
-            <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="https://wa.me/919324745058" target="_blank" rel="noreferrer">
-            <i className="fab fa-whatsapp"></i>
-          </a>
+            <div className="founder-info">
+              <h3>Ishaque Khan</h3>
+              <p className="role">Founder & CEO</p>
+              <p className="bio">
+                Started from a small room in Vashi with just a laptop and unbreakable willpower.
+                Today leading a team of 50+ warriors serving clients in 15+ countries.
+                <br /><br />
+                <strong>"I don't sell websites. I build digital empires."</strong>
+              </p>
+              <div className="founder-social">
+                <a href="https://instagram.com/ishaque.2004" target="_blank" rel="noreferrer">
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/in/ishaque-shaikh-2004" target="_blank" rel="noreferrer">
+                  <i className="fab fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/919324745058" target="_blank" rel="noreferrer">
+                  <i className="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* ===== TEAM ===== */}
       <section className="team-section">
         <div className="container">
-          <motion.h2 className="section-title gradient-text" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>Meet The Squad</motion.h2>
+          <motion.h2 className="section-title gradient-text" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+            Meet The Squad
+          </motion.h2>
           <div className="team-grid">
             {teamMembers.map((member, i) => (
               <div key={i} className="team-card">
@@ -196,7 +196,9 @@ const About = () => {
       {/* ===== PARTNERS ===== */}
       <section className="partners-section">
         <div className="container">
-          <motion.h2 className="section-title" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>Trusted By The Best</motion.h2>
+          <motion.h2 className="section-title" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+            Trusted By The Best
+          </motion.h2>
           <div className="partners-grid">
             {partners.map((partner, i) => (
               <div key={i} className="partner-logo">

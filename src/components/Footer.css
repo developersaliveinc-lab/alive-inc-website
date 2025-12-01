@@ -1,32 +1,31 @@
 .alive-footer {
-  background: #111;
+  background: #162b2f;
   color: #fff;
   font-family: 'Arial', sans-serif;
-  padding: 50px 20px 20px;
-  position: relative;
+  padding: 7px 45px 22px; /* ⭐ Updated from your inspect */
   text-align: center;
 }
 
-/* Footer Container Grid */
-.footer-container {
+/* Footer Main Sections Horizontal */
+.footer-sections {
   display: flex;
+  justify-content: center;
+  gap: 60px;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
-  margin-bottom: 30px;
-  align-items: flex-start;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
-/* Footer Section Headings */
+/* Footer Headings */
 .footer-nav h3,
 .footer-services h3,
 .footer-contact h3 {
   color: #ff3333;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 18px;
 }
 
-/* Quick Links and Services Lists */
+/* Lists */
 .footer-nav ul,
 .footer-services ul {
   list-style: none;
@@ -36,7 +35,7 @@
 
 .footer-nav ul li,
 .footer-services ul li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   font-size: 14px;
   color: #ccc;
 }
@@ -53,7 +52,7 @@
 
 /* Contact Info */
 .footer-contact p {
-  margin: 6px 0;
+  margin: 4px 0;
   color: #ddd;
   font-size: 14px;
 }
@@ -69,7 +68,7 @@
 
 /* Social Icons */
 .footer-social {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .footer-social a {
@@ -88,26 +87,30 @@
 }
 
 .footer-social a:hover {
-  background:black;
+  background: black;
   transform: scale(1.1);
 }
 
-/* Footer Logo Section */
+/* ⭐ Footer Logo EXACT as your inspect */
 .footer-logo-section {
-  margin: 30px 0 20px;
+  text-align: right;        /* ⭐ your inspect */
+  margin: -76px 47px 3px;   /* ⭐ your inspect */
+  margin-right: 170px;      /* ⭐ your inspect overwrite */
 }
 
 .footer-logo {
-  height: 60px;
+  height: 51px;             /* ⭐ your inspect */
+  background: transparent;
 }
 
 /* Footer Bottom */
 .footer-bottom {
-  border-top: 1px solid #333;
+  border-top: 1px solid #0f1a22;
   padding-top: 15px;
   font-size: 13px;
   color: #aaa;
   line-height: 1.6;
+  text-align: center;
 }
 
 .footer-links a {
@@ -120,7 +123,7 @@
   color: #ff3333;
 }
 
-/* Scroll Up Button */
+/* Scroll Top Button */
 .scroll-top {
   position: fixed;
   bottom: 20px;
@@ -146,54 +149,31 @@
 }
 
 /* ===== MOBILE RESPONSIVE ===== */
-@media (max-width: 968px) {
-  .footer-container {
-    flex-direction: column; /* stacked column */
-    text-align: center; /* center everything */
-    gap: 30px;
-    align-items: center;
-  }
-
-  .footer-nav,
-  .footer-services,
-  .footer-contact {
-    width: 100%; /* full width sections */
-    max-width: 400px; /* optional limit */
-    margin: 0 auto; /* center each section */
-  }
-
-  .footer-nav ul,
-  .footer-services ul {
-    padding: 0;
-    margin: 0 auto;
-    text-align: center; /* center list items */
-  }
-
-  .footer-nav ul li,
-  .footer-services ul li {
-    font-size: 14px;
-    margin-bottom: 10px;
-    display: block; /* stacked items */
-  }
-
-  .footer-social a {
-    margin: 5px;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-nav ul li,
-  .footer-services ul li {
-    font-size: 13px;
-    line-height: 1.8; /* line spacing */
-  }
-
+@media (max-width: 768px) {
   .footer-logo {
     height: 50px;
   }
 
+  .footer-sections {
+    gap: 30px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-nav ul li,
+  .footer-services ul li,
+  .footer-contact p {
+    font-size: 13px;
+  }
+
   .footer-bottom {
     font-size: 12px;
-    line-height: 1.4;
+  }
+
+  /* mobile me logo center rahega */
+  .footer-logo-section {
+    text-align: center;
+    margin: 10px auto;
+    margin-right: 0px;
   }
 }
